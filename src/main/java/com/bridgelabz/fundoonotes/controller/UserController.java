@@ -25,7 +25,7 @@ import com.bridgelabz.fundoonotes.dto.LoginDTO;
 import com.bridgelabz.fundoonotes.dto.PasswordDTO;
 import com.bridgelabz.fundoonotes.dto.RegisterDTO;
 import com.bridgelabz.fundoonotes.response.Response;
-import com.bridgelabz.fundoonotes.service.AmazonS3ClientService;
+//import com.bridgelabz.fundoonotes.service.AmazonS3ClientService;
 import com.bridgelabz.fundoonotes.service.UserService;
 import com.bridgelabz.fundoonotes.utility.Utility;
 
@@ -39,9 +39,9 @@ public class UserController {
 
 	@Autowired
 	Utility utility;
-
-	@Autowired
-	private AmazonS3ClientService amazonS3ClientService;
+//
+//	@Autowired
+//	private AmazonS3ClientService amazonS3ClientService;
 
 	@PostMapping("/register")
 	public ResponseEntity<Response> registration(@Valid @RequestBody RegisterDTO userdto, BindingResult bindingresult) {
@@ -102,28 +102,28 @@ public class UserController {
 
 	}
 
-	@PostMapping("/uploadProfilepic")
-	public ResponseEntity<Response> uploadFile(@RequestPart(value = "file") MultipartFile file,
-			@RequestHeader("jwt") String jwt) throws S3BucketException {
-		String url = this.amazonS3ClientService.uploadFileToS3Bucket(file, jwt);
-		return ResponseEntity.ok().body(new Response(200, "Image added successfully", url));
-	}
-
-	@GetMapping("/profilepicUrl")
-	public ResponseEntity<Response> uploadFile(@RequestHeader("jwt") String jwt) throws S3BucketException {
-		String url = amazonS3ClientService.getFileFromS3Bucket(jwt);
-		if (url == null)
-			return ResponseEntity.badRequest().body(new Response(400, "Image not Found", url));
-		else
-			return ResponseEntity.ok().body(new Response(200, "Image added successfully", url));
-	}
-
-	@DeleteMapping("/deleteProfilepic")
-	public ResponseEntity<Response> deleteFile(@RequestHeader("jwt") String jwt) throws S3BucketException {
-		if (amazonS3ClientService.deleteFileFromS3Bucket(jwt))
-			return ResponseEntity.ok().body(new Response(200, "Image deleted successfully", null));
-		else
-			return ResponseEntity.badRequest().body(new Response(400, "Image not Found", null));
-	}
+//	@PostMapping("/uploadProfilepic")
+//	public ResponseEntity<Response> uploadFile(@RequestPart(value = "file") MultipartFile file,
+//			@RequestHeader("jwt") String jwt) throws S3BucketException {
+//		String url = this.amazonS3ClientService.uploadFileToS3Bucket(file, jwt);
+//		return ResponseEntity.ok().body(new Response(200, "Image added successfully", url));
+//	}
+//
+//	@GetMapping("/profilepicUrl")
+//	public ResponseEntity<Response> uploadFile(@RequestHeader("jwt") String jwt) throws S3BucketException {
+//		String url = amazonS3ClientService.getFileFromS3Bucket(jwt);
+//		if (url == null)
+//			return ResponseEntity.badRequest().body(new Response(400, "Image not Found", url));
+//		else
+//			return ResponseEntity.ok().body(new Response(200, "Image added successfully", url));
+//	}
+//
+//	@DeleteMapping("/deleteProfilepic")
+//	public ResponseEntity<Response> deleteFile(@RequestHeader("jwt") String jwt) throws S3BucketException {
+//		if (amazonS3ClientService.deleteFileFromS3Bucket(jwt))
+//			return ResponseEntity.ok().body(new Response(200, "Image deleted successfully", null));
+//		else
+//			return ResponseEntity.badRequest().body(new Response(400, "Image not Found", null));
+//	}
 
 }
