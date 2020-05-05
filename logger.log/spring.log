@@ -11673,3 +11673,297 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2020-05-05 17:43:34.020  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Setting offset for partition test4-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.2.20:9092 (id: 0 rack: null), epoch=0}}
 2020-05-05 17:43:34.026  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions assigned: [test4-0]
 2020-05-05 17:43:34.026  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions assigned: [test5-0]
+2020-05-05 17:47:22.062  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Attempt to heartbeat failed since group is rebalancing
+2020-05-05 17:47:22.062  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Attempt to heartbeat failed since group is rebalancing
+2020-05-05 17:47:22.063  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Revoking previously assigned partitions [test5-0]
+2020-05-05 17:47:22.063  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Revoking previously assigned partitions [test4-0]
+2020-05-05 17:47:22.063  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions revoked: [test5-0]
+2020-05-05 17:47:22.063  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions revoked: [test4-0]
+2020-05-05 17:47:22.063  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] (Re-)joining group
+2020-05-05 17:47:22.063  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] (Re-)joining group
+2020-05-05 17:47:22.085  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] (Re-)joining group
+2020-05-05 17:47:22.235  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] (Re-)joining group
+2020-05-05 17:47:22.244  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Successfully joined group with generation 43
+2020-05-05 17:47:22.244  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Successfully joined group with generation 43
+2020-05-05 17:47:22.245  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Setting newly assigned partitions: test5-0
+2020-05-05 17:47:22.245  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Setting newly assigned partitions: test4-0
+2020-05-05 17:47:22.248  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Setting offset for partition test4-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.2.20:9092 (id: 0 rack: null), epoch=0}}
+2020-05-05 17:47:22.249  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Setting offset for partition test5-0 to the committed offset FetchPosition{offset=9, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.2.20:9092 (id: 0 rack: null), epoch=0}}
+2020-05-05 17:47:22.253  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions assigned: [test5-0]
+2020-05-05 17:47:22.255  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions assigned: [test4-0]
+2020-05-05 19:52:47.555  INFO 29500 --- [RMI TCP Connection(140)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-05-05 19:52:47.592  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Member consumer-2-c009c8bb-0a20-46ae-bdbf-2fc4e20dfcb8 sending LeaveGroup request to coordinator 192.168.2.20:9092 (id: 2147483647 rack: null)
+2020-05-05 19:52:47.592  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Member consumer-1-87081105-a6f6-47f3-a7b2-1b363008c96f sending LeaveGroup request to coordinator 192.168.2.20:9092 (id: 2147483647 rack: null)
+2020-05-05 19:52:47.594  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-1, groupId=group5] Unsubscribed all topics or patterns and assigned partitions
+2020-05-05 19:52:47.594  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-2, groupId=group5] Unsubscribed all topics or patterns and assigned partitions
+2020-05-05 19:52:47.595  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-05-05 19:52:47.595  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-05-05 19:52:47.604  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : group5: Consumer stopped
+2020-05-05 19:52:47.605  INFO 29500 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] essageListenerContainer$ListenerConsumer : group5: Consumer stopped
+2020-05-05 19:52:47.616  INFO 29500 --- [RMI TCP Connection(140)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-05 19:52:47.621  INFO 29500 --- [RMI TCP Connection(140)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-05 19:52:47.642  INFO 29500 --- [RMI TCP Connection(140)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-05 19:52:47.649  INFO 29500 --- [RMI TCP Connection(140)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-05 19:52:53.147  INFO 10068 --- [main] c.b.fundoonotes.FundoonotesApplication   : Starting FundoonotesApplication on DESKTOP-CAQ194A with PID 10068 (D:\fundoonotes\target\classes started by user in D:\fundoonotes)
+2020-05-05 19:52:53.149  INFO 10068 --- [main] c.b.fundoonotes.FundoonotesApplication   : No active profile set, falling back to default profiles: default
+2020-05-05 19:52:53.805  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-05 19:52:53.806  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-05-05 19:52:53.837  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.CollaboratorRepository. If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository.
+2020-05-05 19:52:53.838  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository.
+2020-05-05 19:52:53.840  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LoginRepository. If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository.
+2020-05-05 19:52:53.841  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository.
+2020-05-05 19:52:53.842  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository.
+2020-05-05 19:52:53.842  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 0 Elasticsearch repository interfaces.
+2020-05-05 19:52:53.845  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-05 19:52:53.845  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-05-05 19:52:53.850  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.CollaboratorRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2020-05-05 19:52:53.851  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2020-05-05 19:52:53.851  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LoginRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2020-05-05 19:52:53.852  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2020-05-05 19:52:53.852  INFO 10068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2020-05-05 19:52:53.852  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-05-05 19:52:53.859  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-05 19:52:53.859  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-05 19:52:53.892  INFO 10068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 5 JPA repository interfaces.
+2020-05-05 19:52:54.143  INFO 10068 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-05 19:52:54.375  INFO 10068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-05-05 19:52:54.385  INFO 10068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-05 19:52:54.385  INFO 10068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-05 19:52:54.570  INFO 10068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-05 19:52:54.570  INFO 10068 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1387 ms
+2020-05-05 19:52:54.724  INFO 10068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-05 19:52:54.820  INFO 10068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-05-05 19:52:54.933  INFO 10068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-05 19:52:55.014  INFO 10068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-05 19:52:55.548  INFO 10068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-05 19:52:55.559  INFO 10068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-05 19:52:56.598  INFO 10068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-05 19:52:56.606  INFO 10068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-05 19:52:57.107  WARN 10068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-05 19:52:57.599  INFO 10068 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c190cfc, org.springframework.security.web.context.SecurityContextPersistenceFilter@fbbd90c, org.springframework.security.web.header.HeaderWriterFilter@bfd97fb, org.springframework.security.web.authentication.logout.LogoutFilter@76dc36e5, com.bridgelabz.fundoonotes.filter.JwtFilter@1d6f77d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@559e3f67, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@436a563f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77ce8bc5, org.springframework.security.web.session.SessionManagementFilter@45e639ee, org.springframework.security.web.access.ExceptionTranslationFilter@1b28cff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@20f63ddc]
+2020-05-05 19:52:57.693  INFO 10068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-05 19:52:57.985  INFO 10068 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2020-05-05 19:52:58.007  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-05-05 19:52:58.007  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-05-05 19:52:58.007  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1588688578006
+2020-05-05 19:52:58.165  INFO 10068 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group5
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-05-05 19:52:58.184  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-05-05 19:52:58.185  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-05-05 19:52:58.185  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1588688578184
+2020-05-05 19:52:58.186  INFO 10068 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-1, groupId=group5] Subscribed to topic(s): test5
+2020-05-05 19:52:58.187  INFO 10068 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-05-05 19:52:58.190  INFO 10068 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group5
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-05-05 19:52:58.194  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-05-05 19:52:58.195  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-05-05 19:52:58.195  INFO 10068 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1588688578194
+2020-05-05 19:52:58.195  INFO 10068 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-2, groupId=group5] Subscribed to topic(s): test4
+2020-05-05 19:52:58.195  INFO 10068 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-05-05 19:52:58.206  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-1, groupId=group5] Cluster ID: mJzfx1yoSH-aclC_HbUjvQ
+2020-05-05 19:52:58.206  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-2, groupId=group5] Cluster ID: mJzfx1yoSH-aclC_HbUjvQ
+2020-05-05 19:52:58.207  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Discovered group coordinator 192.168.2.20:9092 (id: 2147483647 rack: null)
+2020-05-05 19:52:58.207  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Discovered group coordinator 192.168.2.20:9092 (id: 2147483647 rack: null)
+2020-05-05 19:52:58.210  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Revoking previously assigned partitions []
+2020-05-05 19:52:58.210  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Revoking previously assigned partitions []
+2020-05-05 19:52:58.211  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions revoked: []
+2020-05-05 19:52:58.211  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions revoked: []
+2020-05-05 19:52:58.211  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] (Re-)joining group
+2020-05-05 19:52:58.211  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] (Re-)joining group
+2020-05-05 19:52:58.222  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] (Re-)joining group
+2020-05-05 19:52:58.222  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] (Re-)joining group
+2020-05-05 19:52:58.225  INFO 10068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-05-05 19:52:58.227  INFO 10068 --- [main] c.b.fundoonotes.FundoonotesApplication   : Started FundoonotesApplication in 5.395 seconds (JVM running for 6.333)
+2020-05-05 19:52:58.233  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Successfully joined group with generation 45
+2020-05-05 19:52:58.233  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Successfully joined group with generation 45
+2020-05-05 19:52:58.237  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Setting newly assigned partitions: test5-0
+2020-05-05 19:52:58.237  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Setting newly assigned partitions: test4-0
+2020-05-05 19:52:58.244  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=group5] Setting offset for partition test4-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.2.20:9092 (id: 0 rack: null), epoch=0}}
+2020-05-05 19:52:58.244  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=group5] Setting offset for partition test5-0 to the committed offset FetchPosition{offset=9, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=192.168.2.20:9092 (id: 0 rack: null), epoch=0}}
+2020-05-05 19:52:58.250  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions assigned: [test4-0]
+2020-05-05 19:52:58.250  INFO 10068 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group5: partitions assigned: [test5-0]
